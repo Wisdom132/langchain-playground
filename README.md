@@ -80,24 +80,24 @@ node src/prompt-template.js
 
 ## API Key References
 
-| Key | Description | Website |
-|-----|-------------|---------|
-| `CEREBRAS_API_KEY` | Access to Cerebras ultra-fast LLM inference (Llama, GLM, etc.) | [cloud.cerebras.ai](https://cloud.cerebras.ai) |
-| `EXA_SEARCH_API_KEY` | Real-time neural web search for AI agents | [exa.ai](https://exa.ai) |
+| Key                  | Description                                                    | Website                                        |
+| -------------------- | -------------------------------------------------------------- | ---------------------------------------------- |
+| `CEREBRAS_API_KEY`   | Access to Cerebras ultra-fast LLM inference (Llama, GLM, etc.) | [cloud.cerebras.ai](https://cloud.cerebras.ai) |
+| `EXA_SEARCH_API_KEY` | Real-time neural web search for AI agents                      | [exa.ai](https://exa.ai)                       |
 
 ---
 
 ## Dependencies
 
-| Package | Purpose |
-|---------|---------|
-| [`langchain`](https://www.npmjs.com/package/langchain) | Core LangChain framework |
-| [`@langchain/core`](https://www.npmjs.com/package/@langchain/core) | Messages, prompts, tools, runnables |
-| [`@langchain/cerebras`](https://www.npmjs.com/package/@langchain/cerebras) | Cerebras LLM integration |
-| [`@langchain/exa`](https://www.npmjs.com/package/@langchain/exa) | Exa search tool integration |
-| [`exa-js`](https://www.npmjs.com/package/exa-js) | Exa JS client |
-| [`dotenv`](https://www.npmjs.com/package/dotenv) | Environment variable loader |
-| [`zod`](https://www.npmjs.com/package/zod) | Schema validation for tool inputs |
+| Package                                                                    | Purpose                             |
+| -------------------------------------------------------------------------- | ----------------------------------- |
+| [`langchain`](https://www.npmjs.com/package/langchain)                     | Core LangChain framework            |
+| [`@langchain/core`](https://www.npmjs.com/package/@langchain/core)         | Messages, prompts, tools, runnables |
+| [`@langchain/cerebras`](https://www.npmjs.com/package/@langchain/cerebras) | Cerebras LLM integration            |
+| [`@langchain/exa`](https://www.npmjs.com/package/@langchain/exa)           | Exa search tool integration         |
+| [`exa-js`](https://www.npmjs.com/package/exa-js)                           | Exa JS client                       |
+| [`dotenv`](https://www.npmjs.com/package/dotenv)                           | Environment variable loader         |
+| [`zod`](https://www.npmjs.com/package/zod)                                 | Schema validation for tool inputs   |
 
 ---
 

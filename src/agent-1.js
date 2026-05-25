@@ -58,6 +58,21 @@ const toolMonitoringMiddleware = createMiddleware({
   },
 });
 
+const retryMiddleware = (maxRetries = 3) => {
+  return createMiddleware({
+    name: "retryMiddleware",
+    wrapModelCall: async (request, handler) => {
+      for (let attempts = 0; attempts < maxRetries; attempts++) {
+        try {
+          return await handler(request);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      throw new Error("Max retries exceeded");
+    },
+  });
+};
 const searchTool = tool(
   async ({ query }) => {
     const results = await exaTool.invoke(query);
@@ -88,7 +103,7 @@ const fetchListOfUsers = tool(
 const agent = createAgent({
   model,
   tools: [searchTool, fetchListOfUsers],
-  middleware: [modelMiddleware, toolMonitoringMiddleware],
+  middleware: [retryMiddleware(3), modelMiddleware, toolMonitoringMiddleware],
   systemPrompt: `You are an AI assistant with access to tools.
 
   Always use tools when the user requests:
