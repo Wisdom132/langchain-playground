@@ -1,0 +1,21 @@
+{
+  "name": "langchain",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@langchain/cerebras": "^1.0.4",
+    "@langchain/core": "^1.1.48",
+    "@langchain/exa": "^1.0.2",
+    "dotenv": "^17.4.2",
+    "exa-js": "^2.13.0",
+    "langchain": "^1.4.1",
+    "zod": "^4.4.3"
+  }
+}
